@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+ }
+
+
+ html, body {
+    margin: 0;
+    padding: 0;
+ }
+
+
+ .image-container {
+    margin: 0 auto; /* center the image containers */
+    width: 80%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22); /* material box shadow */
+    margin-bottom: 20px;
+    transition-duration: 1s;
+ }
+
+ .image-container:hover {
+    width: 90%;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+ }
+
+ /* make the images responsive */
+ img {
+    width: 100%;
+    height: auto;
+ }
+
+ .image-description {
+    padding: 0 15px 15px 15px;
+    text-align: center;
+ }
+ 
+ /* lightbox stylesheet */
+ .lightbox {
+    display: table; /* helps us center the lightbox-content */
+    transition-duration: 1s; /* duration of the fade in effect */
+    
+    /* make the lightbox occupy the entire page */
+    position: fixed;
+    top: -100%; /* hide the lightbox above the top edge */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+ }
+
+ .lightbox:target {
+    top: 0; /* make the lightbox cover the entire page */
+ }
+ .lightbox-content {
+    display: table-cell;
+    vertical-align: middle; /* vertically center */
+    text-align: center; /* horizontally center */
+ }
+
+ .close {
+    /* position the CLOSE button to the top-right corner */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+    /* style the close button */
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+ }
+ 
+ /* make the image responsive */
+ .lightbox img {
+    max-width: 100%;
+    height: auto;
+ }
+
+
+ a{
+    text-decoration: none;
+}
+
+
+* {
+    box-sizing: border-box;
+ }
+ html, body {
+    margin: 0;
+    padding: 0;
+ }
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+ }
+ main {
+    flex: 1 0 auto;
+ }
+ footer {
+    color: #fff;
+    background: #333;
+    position: relative; /* required to position the copyright at the bottom */
+    font-size: 80%;
+ }
+ .footer-copyright {
+    width: 100%;
+    height: 40px;
+    background: #111;
+    /* positions the copyright at the bottom of the footer */
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+ }
+ .footer-body {
+    margin-bottom: 40px;
+ }
+ /* the clearfix hack */
+ .footer-body::after {
+    content: "";
+    display: block;
+    clear: both;
+ }
+ /* float the divs */
+ .footer-body > div {
+    float: left;
+    padding: 20px;
+ }
+ /* sets the width of the first column */
+ .footer-body > div:first-child {
+    font-size: 150%;
+    width: 35%;
+    text-align: center;
+ }
+ /* sets the width of the second column */
+ .footer-body > div:last-child {
+    width: 65%;
+ }
+ .footer-body ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+ }
+ .footer-body li > a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 7px;
+ }
+
+
+
+ .footer-body a:hover{
+    color:rgb(77, 51, 221);
+    border:red;
+
+}
+.footer-body a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background:red;
+    transition: 2s;
+    bottom: 0;
+
+}
+.footer-body a:hover:after{
+width: 100%;
+ }

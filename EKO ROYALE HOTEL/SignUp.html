@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <h2 style=" color:blue; text-align: center; font: size 40px; font-family: cursive;"> SIGN UP</h2>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
+<script src="./bootstrap/script.js"></script>
+<link rel="stylesheet" href="./SignUp.css">
+</head>
+<body>
+    <section>
+        <style>
+            body {
+              background: url(./Images/150557503.jpg);
+              width: 100%;
+              height: 100%;
+              background-size: 100%;
+              background-repeat: no-repeat;
+            }
+          </style>
+          </section>
+<div class="container">
+ <ul>
+  <form action="/action_page.php">
+  <b><label for="usrname">Username</label><input type="text" id="usrname" name="usrname" required></b>
+  <b><label for="email">Email</label><input type="email" id="email" name="email" required></b>
+  <b><label for="password">Password</label></b>
+  <input type="password" id="psw" name="psw" pattern="(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{8,}"
+  title="must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+   <!-- <input type="checkbox"  onclick="myFunction ()">  -->
+  <b><label for="psw-repeat">Confirm Password</label></b>
+  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  </ul>
+  <p>By creating an account you agree to our <a href="#" style="color:lightskyblue">Terms & Privacy</a></p>
+
+   <input type="submit" class="btn btn-success" value="Submit" required>
+ </form>
+</div>
+<div id="message">
+  <h3>password must contain the following:</h3>
+  <p id="letter" class="invalid"> A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid"> A <b> capital(uppercase)</b> letter</p>
+  <p id="number" class="invalid"> A <b> number</b></p>
+  <p id="length" class="invalid"> Minimum <b> 8 characters</b> letter</p>
+</div>
+
+<script>
+    var myInput = document.getElementById("psw");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+  
+    myInput.onfocus = function(){
+      document.getElementById ("message") .style.display = "block";
+    }
+    myInput.onblur = function ()
+    {
+      document.getElementById("message") .style.display = "none";
+    }
+    myInput.onkeyup = function ()
+    {
+      var lowerCaseLtters = /[a-z]/g;
+      if (myInput.value.match(lowerCaseLetters)){
+        letter.classList.remove("invalid");
+        letter.classList.add ("invalid");
+      } else{
+        letter.classList.remove("invalid");
+      }
+      var upperCaseLetters = /[A-Z]/g;
+      if (myInput.value.match(upperCaseLetters)){
+        capital.classList.remove ("invalid");
+        capital.classList.add ("invalid");
+      }
+      var numbers = /[0-9]/g;
+      if(myInput.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add ("valid")
+      } else{
+        number.classList.add ("invalid");
+      }
+      if (myInput.value.length >=8){
+        length.classList.add("valid")
+      } else{
+        length.classList.remove("valid");
+        length.classList.add("invalid"); 
+      }
+    }
+</script>
+    
+
+<script src="./SignUp.js"></script>
+</body>
+<header></header>
+<main></main>
+<footer>
+<div class="footer-body">
+  <div> EKO ROYALE HOTEL </div>
+  <div>
+     <ul>
+      <p> At Eko Royale Hotels, we give you a royal treatment. </p>
+        <li><a href="./Index.html"> Home </a></li>
+        <li><a href="./viewgallery.html"> Gallery </a></l>
+        <li><a href="./ContactUs.html"> Contact </a></li>
+        <li><a href="#" style="color: turquoise"> Terms & Conditions </a></li>
+        <li><a href="#"> Privacy Policy </a></li>
+     </ul>
+  </div>
+</div>
+<div class="footer-copyright">
+  © EKO ROYALE 2022. 
+</div>
+</footer>
+

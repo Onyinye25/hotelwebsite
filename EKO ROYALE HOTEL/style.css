@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif
+}
+
+
+.cssmarquee{
+    height: 50px;
+    overflow: hidden;
+    /* position:absolute; */
+    color: rgb(77, 51, 221);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: left;
+    animation: cssmarquee 2s linear infinite alternate;
+}
+
+@keyframes cssmarquee{
+    0%{
+        transform: translateX(70%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.text{
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+
+.text h1{
+    color: red;
+    line-height: 1em;
+    text-transform: uppercase;   
+}
+
+
+
+a{
+    text-decoration: none;
+}
+
+.main-menu{
+    width: 100%;
+    height: 100%;
+    background: url("#");
+    background-repeat: no-repeat;
+    background-size:contain;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 100px;
+}
+
+nav ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: red;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a:hover{
+    color:rgb(77, 51, 221);
+    border:red;
+
+}
+nav ul li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background:red;
+    transition: 2s;
+    bottom: 0;
+
+}
+ nav ul li a:hover:after{
+width: 100%;
+}
+
+.btn{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 40px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    background-size: 152% 100%;
+    background:rgb(77, 51, 221);
+    border:red;
+
+}
+
+.btn:hover{
+    background: transparent;
+    border-color: #fd4766;
+    color: #fd4766;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
+  footer {
+    color: #fff;
+    background: #333;
+    position: relative; /* required to position the copyright at the bottom */
+    font-size: 80%;
+  }
+  .footer-copyright {
+    width: 100%;
+    height: 40px;
+    background: #111;
+    /* positions the copyright at the bottom of the footer */
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .footer-body {
+    margin-bottom: 40px;
+  }
+  /* the clearfix hack */
+  .footer-body::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  /* float the divs */
+  .footer-body > div {
+    float: left;
+    padding: 20px;
+  }
+  /* sets the width of the first column */
+  .footer-body > div:first-child {
+    font-size: 150%;
+    width: 35%;
+    text-align: center;
+  }
+  /* sets the width of the second column */
+  .footer-body > div:last-child {
+    width: 65%;
+  }
+  .footer-body ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  .footer-body li > a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 7px;
+  }
+  
