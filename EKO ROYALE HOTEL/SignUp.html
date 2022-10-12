@@ -27,18 +27,42 @@
 <div class="container">
  <ul>
   <form action="/action_page.php">
-  <b><label for="usrname">Username</label><input type="text" id="usrname" name="usrname" required></b>
-  <b><label for="email">Email</label><input type="email" id="email" name="email" required></b>
-  <b><label for="password">Password</label></b>
-  <input type="password" id="psw" name="psw" pattern="(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{8,}"
+    <div>
+
+  <b><label for="usrname">Username: </label>
+
+    </div>
+    <input type="text" id="usrname" name="usrname" required></b>
+
+<div>
+  <b><label for="email">Email: </label></b>
+</div>
+  <input type="email" id="email" name="email" required>
+  
+<div>
+<b><label for="password">Password:</label></b>
+</div>
+<input type="password" id="psw" name="psw" pattern="(?=.*\d) (?=.*[a-z]) (?=.*[A-Z]).{8,}"
   title="must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
    <!-- <input type="checkbox"  onclick="myFunction ()">  -->
-  <b><label for="psw-repeat">Confirm Password</label></b>
+ <div>
+    <b><label for="psw-repeat">Confirm Password:</label></b> 
+ </div> 
   <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
   </ul>
-  <p>By creating an account you agree to our <a href="#" style="color:lightskyblue">Terms & Privacy</a></p>
+  <div class="agree">
 
+   <div class="flex">
+     <input type="checkbox" required/>
+  
+    <p>By creating an account you agree to our <a href="#" style="color:lightskyblue">Terms & Privacy</a></p>
+
+   </div>
    <input type="submit" class="btn btn-success" value="Submit" required>
+  
+  </div>
+  
+     </div>
  </form>
 </div>
 <div id="message">
@@ -99,7 +123,7 @@
 <main></main>
 <footer>
 <div class="footer-body">
-  <div> EKO ROYALE HOTEL </div>
+  <div> <a href='./Index.html' class="whitelink">EKO ROYALE HOTEL </a></div>
   <div>
      <ul>
       <p> At Eko Royale Hotels, we give you a royal treatment. </p>

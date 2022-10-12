@@ -12,11 +12,12 @@
     overflow: hidden;
     /* position:absolute; */
     color: rgb(77, 51, 221);
-    width: 100%;
+    width: 60%;
     height: 100%;
     margin: 0;
     line-height: 50px;
     text-align: left;
+    text-align: center;
     animation: cssmarquee 2s linear infinite alternate;
 }
 
@@ -128,7 +129,7 @@ width: 100%;
   }
   body {
     display: flex;
-    min-height: 100vh;
+
     flex-direction: column;
   }
   main {
