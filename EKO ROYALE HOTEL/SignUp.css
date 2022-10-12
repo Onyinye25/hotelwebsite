@@ -6,22 +6,46 @@
     font-family: 'poppins', sans-serif
 }
 
+form{
+   align-items: center;
+   justify-content: center;
+   display: grid;
+}
+
 input[type=text], input[type=password] {
-    width: 100%;
+    /* width: 0%; */
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
   }
-  
+ a {
+     color: #f1f1f1;
+     text-decoration: none;
+  }
+   a:hover {
+     color: white;
+     text-decoration: none;
+
+  }
   /* Add a background color when the inputs get focus */
   input[type=text]:focus, input[type=password]:focus{
     background-color: #ddd;
     outline: none;
   }
+.flex{
+display: flex;
+justify-content: center;
+}
+p{
+   margin-left: 5px;
+}
+  .agree{
+      text-align: center;
+  }
 input{
-    width: 100%;
+    /* width: 50%; */
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
